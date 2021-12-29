@@ -178,6 +178,16 @@
     src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlWHYg.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
+:root {
+    --base-color: #F8F6FA;
+    --light-pink-bg: rgba(203, 71, 160, 0.3);
+    --light-green-bg: rgba(0, 255, 133, 0.2);
+    --base-gradient: linear-gradient(97.62deg, #EB11AA -15.99%, #2E81E2 104.3%);
+    --green: #09F5C4;
+    --bg-dark: #0A0C26;
+    --light-silver: rgba(46, 47, 64, 0.3);
+}
+
 *, 
 ::after,
 ::before {
@@ -190,8 +200,8 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
-    color: #F8F6FA;
-    background-color: #0A0C26;
+    color: var(--base-color);
+    background-color: var(--bg-dark);
     margin: 0;
 }
 
@@ -241,7 +251,7 @@ input, select, button, textarea {
     width: 160px;
     height: 55px;
     text-transform: uppercase;
-    background: linear-gradient(97.62deg, #EB11AA -15.99%, #2E81E2 104.3%);
+    background: var(--base-gradient);
     color: #F5E8F3;
     padding: 10px;
     border-radius: 2px;
@@ -252,8 +262,20 @@ input, select, button, textarea {
     justify-content: center;
 }
 
-.btn--empty {
-    background-color: transparent;
+.btn_transparent {
+    /* clip-path: polygon(0% 0%, 0% 99%, 1% 99%, 1% 2%,
+    99% 2%, 99% 98%, 0 99%, 0 100%, 100% 100%, 100% 0%);
+    background-color: transparent; */
+    position: relative;
+}
+
+.btn_transparent::after {
+    /* content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
 }
 
 .btn:hover {
@@ -331,7 +353,7 @@ input, select, button, textarea {
 }
 
 .hero-title__slogan { 
-    color: #09F5C4;
+    color: var(--green);
 }
 .main__text {
     opacity: 0.6;
@@ -353,7 +375,7 @@ input, select, button, textarea {
 .counter{
     display: flex;
     align-items: center;
-    background: rgba(46, 47, 64, 0.3);
+    background: var(--light-silver);
     backdrop-filter: blur(4px);
     border-radius: 2px;
 }
@@ -378,7 +400,7 @@ input, select, button, textarea {
     right: 0;
     width: 1px;
     height: 64px;
-    background-color: #F8F6FA;
+    background-color: var(--base-color);
 }
 
 .counter__title {
@@ -394,4 +416,63 @@ input, select, button, textarea {
 
 .counter__price {
     opacity: 0.5;
+}
+/* hero and */
+
+/* line start */
+.line {
+    width: 100%;
+    background: rgba(213, 236, 255, 0.3);
+    backdrop-filter: blur(12px);
+    padding: 60px 110px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.line:before {
+    content: '';
+    position: absolute;
+    width: 985px;
+    height: 930px;
+    top: -100%;
+    left: -40%;
+    background-color: var(--light-pink-bg);
+    filter: blur(472px);
+}
+
+.line:after {
+    content: '';
+    position: absolute;
+    width: 630px;
+    height: 595px;
+    top: -50%;
+    right: 0;
+    background-color: var(--light-green-bg);
+    filter: blur(472px);
+}
+
+.line-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.line-block {
+    text-align: center;
+    gap: 10px;
+    color: var(--base-color);
+}
+
+.line-number {
+    font-weight: 500;
+    font-size: 61px;
+    line-height: 120%;
+}
+
+.line-text {
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 150%;
 }
