@@ -1,258 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFT</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./style/app.css">
-    <style>
-        /* cyrillic-ext */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlbHYjedg.woff2) format('woff2');
-        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-        }
-        /* cyrillic */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlSHYjedg.woff2) format('woff2');
-        unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-        }
-        /* vietnamese */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlZHYjedg.woff2) format('woff2');
-        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-        }
-        /* latin-ext */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlYHYjedg.woff2) format('woff2');
-        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-        }
-        /* latin */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlWHYg.woff2) format('woff2');
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-        /* cyrillic-ext */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlbHYjedg.woff2) format('woff2');
-        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-        }
-        /* cyrillic */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlSHYjedg.woff2) format('woff2');
-        unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-        }
-        /* vietnamese */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlZHYjedg.woff2) format('woff2');
-        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-        }
-        /* latin-ext */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlYHYjedg.woff2) format('woff2');
-        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-        }
-        /* latin */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlWHYg.woff2) format('woff2');
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-        /* cyrillic-ext */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 600;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlbHYjedg.woff2) format('woff2');
-        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-        }
-        /* cyrillic */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 600;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlSHYjedg.woff2) format('woff2');
-        unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-        }
-        /* vietnamese */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 600;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlZHYjedg.woff2) format('woff2');
-        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-        }
-        /* latin-ext */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 600;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlYHYjedg.woff2) format('woff2');
-        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-        }
-        /* latin */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 600;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlWHYg.woff2) format('woff2');
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-        /* cyrillic-ext */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlbHYjedg.woff2) format('woff2');
-        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-        }
-        /* cyrillic */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlSHYjedg.woff2) format('woff2');
-        unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-        }
-        /* vietnamese */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlZHYjedg.woff2) format('woff2');
-        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-        }
-        /* latin-ext */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlYHYjedg.woff2) format('woff2');
-        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-        }
-        /* latin */
-        @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/oswald/v40/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlWHYg.woff2) format('woff2');
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-    </style>
-</head>
-<body>
 
-    <main>
-        <header class="header">
-            <div class="container header-container">
-                <a href="#" class="logo">
-                    <div class="logo__img">
-                        <img src="./img/Subtract.svg" alt="NFT Logo" width="1" height="1">
-                    </div>
-                    <p class="log__text">Base</p>
-                </a>
-                <div class="header-container__left">
-                    <nav>
-                        <ul class="nav">
-                            <li class="nav__item"><a href="#" class="nav__link nav__link--active">Home</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Feature</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Product</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <button class="header__btn btn">BILD NOW</button>
-                </div>
-            </div>
-        </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NFT</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="./style/app.css">
+    </head>
 
-        <article class="container">
-            <div class="main">
-                <div class="main__left">
-                    <section class="main__left-top">
-                        <h1 class="main__title">The beauty of every 
-                            <span class="main__title-text">NFT</span>
-                        </h1>
-                        <p class="main__text">
-                            Art does not exist only to entertain, but also to 
-                            challenge one to think, to provoke, even to disturb
-                        </p>
-                        <div class="main__btn">
-                            <button class="btn">BILD NOW</button>
-                            <a href="#" class="btn btn-empty">LEARN MORE</a>
-                        </div>
-                    </section>
-                    <section class="main__counter">
-                        <div class="counter__block">
-                            <h2 class="counter__block-title">Current Bil</h2>
-                            <p class="counter__block-number">5.00 ETH</p>
-                            <p class="counter__block-price">$11, 373.55</p>
-                        </div>
-                        <div class="counter__date">
-                            <h2 class="counter__block-title">Auction ends in</h2>
-                            <div class="counter__block-number"></div>
-                            <div class="counter__block-price"></div>
-                        </div>
-                    </section>
-                </div>
-                <section class="main__right">
-                    <div class="main__photo">
-                        <img src="./img/bg-main.png" alt="Background main">
+    <body>
+        <main>
+            <header class="header">
+                <div class="container header-container">
+                    <a href="/" class="logo">
+                        <img class="logo__img" src="./img/Subtract.svg" alt="NFT Logo" width="1" height="1">
+                        <p class="logo__text">Base</p>
+                    </a>
+                    <div class="header-nav-wrap">
+                        <nav>
+                            <ul class="nav">
+                                <li class="nav__item"><a href="#" class="nav__link nav__link--active">Home</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Feature</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Product</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <button class="btn">BILD NOW</button>
                     </div>
-                </section>
-            </div>
-        </article>
-    </main>
-   
-    <script src="./js/app.js"></script>
-</body>
+                </div>
+            </header>
+
+            <article class="hero">
+                <div class="container hero-container">
+                    <div class="hero__content">
+                        <section>
+                            <h1 class="hero-title">The beauty of every
+                                <span class="hero-title__slogan">NFT</span>
+                            </h1>
+                            <p class="hero__text">
+                                Art does not exist only to entertain, but also to
+                                challenge one to think, to provoke, even to disturb
+                            </p>
+                            <div class="hero__btns-wrap">
+                                <button class="btn">BILD NOW</button>
+                                <a href="#" class="btn hero__btn">LEARN MORE</a>
+                            </div>
+                        </section>
+                        <section class="counter hero__counter">
+                            <div class="counter__part counter__part_deco">
+                                <h2 class="counter__title">Current Bil</h2>
+                                <p class="counter__number">5.00 ETH</p>
+                                <p class="counter__price">$11, 373.55</p>
+                            </div>
+                            <div class="counter__part">
+                                <h2 class="counter__title">Auction ends in</h2>
+                                <div class="counter__number"></div>
+                                <div class="counter__price"></div>
+                            </div>
+                        </section>
+                    </div>
+                    <img class="hero__img" src="./img/bg-main.png" width="1" height="1" alt="Background main">
+                </div>
+            </article>
+        </main>
+
+        <script src="./js/app.js"></script>
+    </body>
+
 </html>
