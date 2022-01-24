@@ -247,6 +247,17 @@ input, select, button, textarea {
     margin: 0 auto;
 }
 
+.container_center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text {
+    opacity: 0.7;
+}
+
+/* btn start */
 .btn {
     width: 160px;
     height: 55px;
@@ -271,7 +282,47 @@ input, select, button, textarea {
 .btn:hover {
     background: linear-gradient(97.62deg, #f748c2 -15.99%, #549bec 104.3%);
 }
+/* btn end */
 
+/* title start*/
+.title {
+    font-weight: bold;
+    line-height: 120%;
+}
+
+.title_large {
+    font-size: 61px;
+}
+
+.title_base {
+    font-size: 49px;
+}
+
+.title_center {
+    text-align: center;
+}
+
+.title-small {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 160%;
+}
+
+.title__slogan { 
+    color: var(--green);
+    text-transform: uppercase;
+}
+/* title end*/
+
+/* content start */
+.content__text {
+    margin-top: 25px;
+}
+
+.content__btn {
+    margin-top: 35px;
+}
+/* content end */
 
 /* header */
 .header-container {
@@ -335,16 +386,10 @@ input, select, button, textarea {
     width: 407px;
 }
 
-
-.hero-title {
-    font-weight: bold;
-    font-size: 61px;
-    line-height: 120%;
+.hero__text {
+    margin-top: 25px;
 }
 
-.hero-title__slogan { 
-    color: var(--green);
-}
 .main__text {
     opacity: 0.6;
     margin-top: 25px;
@@ -416,7 +461,6 @@ input, select, button, textarea {
     backdrop-filter: blur(12px);
     padding: 60px 110px;
     margin-top: 20px;
-    margin-bottom: 20px;
     position: relative;
 }
 
@@ -466,3 +510,156 @@ input, select, button, textarea {
     font-size: 25px;
     line-height: 150%;
 }
+/* line end */
+
+/* about start */
+.about {
+    margin-top: 130px;
+}
+
+.about__photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 25px;
+}
+
+.photo {
+    width: 250px;
+    height: 250px;
+}
+
+.about__content {
+    margin-left: 115px;
+}
+/* about and */
+
+/* benefits start */
+.befenits {
+    margin-top: 180px;
+}
+
+.benefits__blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 75px 25px;
+    margin-left: 35px;
+}
+/* benefits end */
+
+/* block start */
+.block {
+    width: 345px;
+    height: 225px;
+    position: relative;
+    background: rgba(46, 47, 64, 0.3);
+    backdrop-filter: blur(4px);
+    border-radius: 2px;
+    text-align: center;
+    padding: 80px 30px 30px 30px;
+}
+
+.block::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 50px;
+}
+
+.block_pink:before {
+    top: 10px;
+    background: radial-gradient(47.67% 47.67% at 50% 50%, 
+                rgba(202, 71, 160, 0.12) 0%, 
+                rgba(202, 71, 160, 0.052938) 18.45%, 
+                rgba(202, 71, 160, 0) 100%);
+
+}
+
+.block_violet::before {
+    top: 15px;
+    background: radial-gradient(47.67% 47.67% at 50% 50%, 
+                rgba(74, 0, 255, 0.12) 0%, 
+                rgba(79, 0, 255, 0.0756) 18.45%, 
+                rgba(75, 0, 255, 0) 100%);
+}
+
+.block_blue::before {
+    top: 20px;
+    background: radial-gradient(47.67% 47.67% at 50% 50%, 
+                rgba(157, 191, 255, 0.12) 0%, 
+                rgba(157, 191, 255, 0.0264) 18.45%, 
+                rgba(157, 191, 255, 0) 100%);
+}
+
+.block_green::before {
+    top: 25px;
+    background: radial-gradient(59.44% 59.44% at 50.03% 38.28%,         
+                rgba(2, 252, 177, 0.12) 0%, 
+                rgba(2, 252, 177, 0.0264) 18.45%, 
+                rgba(2, 252, 177, 0) 100%);
+}
+
+.block__img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.block__text {
+    margin-top: 15px;
+}
+/* block end */
+
+/* art start */
+.art {
+    margin-top: 120px;
+}
+
+.art__tabs {
+    margin-top: 60px;
+}
+
+.art__cards {
+    margin-top: 25px;
+}
+/* art end */
+
+/* tab start */
+.tab__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tab__item {
+    width: 160px;
+    height: 55px;
+    margin-left: 25px;
+    padding: 10px;
+    background: rgba(46, 47, 64, 0.3);
+    backdrop-filter: blur(4px);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.tab__item_active,
+.tab__item:hover {
+    background: var( --base-gradient);
+}
+
+.tab__item:first-child {
+    margin-left: 0;
+}
+
+.tab__title {
+    opacity: 1;
+    text-transform: uppercase;
+}
+/* tab end */
