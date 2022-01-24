@@ -279,6 +279,11 @@ input, select, button, textarea {
     box-shadow: 0px 0px 0px 2px #549bec;
 }
 
+.btn_small {
+    width: 70px;
+    height: 50px;
+}
+
 .btn:hover {
     background: linear-gradient(97.62deg, #f748c2 -15.99%, #549bec 104.3%);
 }
@@ -625,6 +630,18 @@ input, select, button, textarea {
 
 .art__cards {
     margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.art__card {
+    max-width: 345px;
+    width: 100%;
+    margin-left: 25px;
+}
+
+.art__card:first-child {
+    margin-left: 0;
 }
 /* art end */
 
@@ -663,3 +680,55 @@ input, select, button, textarea {
     text-transform: uppercase;
 }
 /* tab end */
+
+/* card start */
+.card {
+    padding: 30px;
+    background: rgba(46, 47, 64, 0.3);
+    backdrop-filter: blur(4px);
+    border-radius: 2px;
+}
+
+.card__picture {
+    width: 285px;
+    height: 180px;
+}
+
+.card__description {
+    margin-top: 30px;
+}
+
+.card__price {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.icon-price {
+    width: 16px;
+    height: 30px;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    text-align: right;
+}
+
+.price-number {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 160%;
+    color: var(--green);
+}
+/* card end */
+
+/* partners start */
+.partners {
+    margin-top: 130px;
+}
+/* partners end */
