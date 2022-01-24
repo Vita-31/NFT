@@ -462,7 +462,7 @@ input, select, button, textarea {
 /* line start */
 .line {
     width: 100%;
-    background: rgba(213, 236, 255, 0.3);
+    background: linear-gradient(89.96deg, rgba(203, 71, 160, 0.5) 0.02%, rgba(105, 71, 203, 0.5) 49.47%, rgba(0, 255, 133, 0.5) 99.97%);
     backdrop-filter: blur(12px);
     padding: 60px 110px;
     margin-top: 20px;
@@ -474,8 +474,9 @@ input, select, button, textarea {
     position: absolute;
     width: 985px;
     height: 930px;
-    top: -100%;
-    left: -40%;
+    top: -140px;
+    left: 0;
+    transform: translateX(-50%);
     background-color: var(--light-pink-bg);
     filter: blur(472px);
 }
@@ -485,7 +486,7 @@ input, select, button, textarea {
     position: absolute;
     width: 630px;
     height: 595px;
-    top: -50%;
+    top: 75px;
     right: 0;
     background-color: var(--light-green-bg);
     filter: blur(472px);
