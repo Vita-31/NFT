@@ -630,9 +630,18 @@ input, select, button, textarea {
 }
 
 .art__cards {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
+}
+
+.art__cards_visible {
+    opacity: 1;
+    pointer-events: unset;
+    position: unset;
 }
 
 .art__card {
