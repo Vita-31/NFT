@@ -636,6 +636,7 @@ input, select, button, textarea {
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
+    transition: .3s;
 }
 
 .art__cards_visible {
