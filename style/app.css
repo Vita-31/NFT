@@ -741,6 +741,7 @@ input, select, button, textarea {
 /* partners start */
 .partners {
     margin-top: 130px;
+    transform: hue;
 }
 
 .partners-container {
@@ -755,3 +756,13 @@ input, select, button, textarea {
     object-fit: contain;
 }
 /* partners end */
+
+/* artists start */
+.artists {
+    margin-top: 115px;
+}
+
+.artists__cards {
+    margin-top: 60px;
+}
+/* artists end */
