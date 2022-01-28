@@ -742,4 +742,16 @@ input, select, button, textarea {
 .partners {
     margin-top: 130px;
 }
+
+.partners-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.partners__img {
+    width: 140px;
+    height: 45px;
+    object-fit: contain;
+}
 /* partners end */
