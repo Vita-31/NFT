@@ -253,6 +253,7 @@ input, select, button, textarea {
     justify-content: space-between;
 }
 
+
 .text {
     opacity: 0.7;
 }
@@ -467,6 +468,7 @@ input, select, button, textarea {
     padding: 60px 110px;
     margin-top: 20px;
     position: relative;
+    overflow: hidden;
 }
 
 .line:before {
@@ -479,6 +481,7 @@ input, select, button, textarea {
     transform: translateX(-50%);
     background-color: var(--light-pink-bg);
     filter: blur(472px);
+    z-index: -1;
 }
 
 .line:after {
@@ -490,6 +493,7 @@ input, select, button, textarea {
     right: 0;
     background-color: var(--light-green-bg);
     filter: blur(472px);
+    z-index: -1;
 }
 
 .line-container {
@@ -646,8 +650,6 @@ input, select, button, textarea {
 }
 
 .art__card {
-    max-width: 345px;
-    width: 100%;
     margin-left: 25px;
 }
 
@@ -694,6 +696,8 @@ input, select, button, textarea {
 
 /* card start */
 .card {
+    max-width: 345px;
+    width: 100%;
     padding: 30px;
     background: rgba(46, 47, 64, 0.3);
     backdrop-filter: blur(4px);
@@ -705,8 +709,38 @@ input, select, button, textarea {
     height: 180px;
 }
 
+.card__photo {
+    position: relative;
+    width: 285px;
+    height: 155px;
+    border-radius: 2px;
+}
+
+.card__photo-artist {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 93px;
+    height: 93px;
+}
+
 .card__description {
     margin-top: 30px;
+}
+
+.card__title {
+    margin-top: 60px;
+}
+
+.card__text {
+    margin-top: 15px;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.card__btn {
+    margin-top: 25px;
 }
 
 .card__price {
@@ -757,6 +791,7 @@ input, select, button, textarea {
 }
 /* partners end */
 
+
 /* artists start */
 .artists {
     margin-top: 115px;
@@ -764,5 +799,70 @@ input, select, button, textarea {
 
 .artists__cards {
     margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.artists__card {
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.artists__card:first-child {
+    margin-left: 0;
 }
 /* artists end */
+
+/* create start */
+.create {
+    margin-top: 130px;
+    text-align: center;
+}
+
+.create__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 610px;
+}
+
+.create__text {
+    margin-top: 25px;
+}
+
+.create__btn {
+    margin-top: 35px;
+}
+/* create end */
+
+/* footer start */
+.footer {
+    margin-top: 130px;
+    padding: 40px 0;
+}
+
+.footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__item {
+    margin-left: 80px;
+}
+
+.footer__item:first-child {
+    margin-left: 0;
+}
+
+.footer__link {
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.footer__link:hover {
+    opacity: 0.6;
+}
+/* footer end */
