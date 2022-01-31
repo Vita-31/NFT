@@ -42,9 +42,9 @@ function countTimer() {
     }
 
     const days = currentTime > 0 ? Math.floor(currentTime / 1000 / 60 / 60 / 24) : 0;
-    const hourse = currentTime > 0 ? Math.floor(currentTime / 1000 / 60 / 60) % 24 : 0;
-    const minutes = currentTime > 0 ? Math.floor(currentTime / 1000 / 60) % 60 : 0;
-    const seconds = currentTime > 0 ? Math.floor(currentTime / 1000) % 60 : 0;
+    const hourse = currentTime > 0 ? Math.floor((currentTime / 1000 / 60 / 60) % 24) : 0;
+    const minutes = currentTime > 0 ? Math.floor((currentTime / 1000 / 60) % 60) : 0;
+    const seconds = currentTime > 0 ? Math.floor((currentTime / 1000) % 60) : 0;
 
     daysItem.textContent = days < 10 ? '0' + days : days;
     houresItem.textContent = hourse < 10 ? '0' + hourse : hourse;
