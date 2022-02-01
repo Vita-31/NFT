@@ -54,3 +54,16 @@ function countTimer() {
     let timerCount = setInterval(countTimer, 1000);
 }
 countTimer()
+
+
+//open burger menu
+const header = document.getElementById('header');
+const body = document.querySelector('body')
+header.addEventListener('click', (e) => {
+    const burger = e.target.closest('.burger');
+    if(burger) {
+    header.classList.toggle('open-menu');
+    body.classList.toggle('open')
+
+    }
+})
