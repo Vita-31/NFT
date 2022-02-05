@@ -582,7 +582,7 @@ input, select, button, textarea {
 /* about and */
 
 /* benefits start */
-.befenits {
+.benefits {
     margin-top: 180px;
 }
 
@@ -596,8 +596,8 @@ input, select, button, textarea {
 
 /* block start */
 .block {
-    width: 345px;
-    height: 225px;
+    max-width: 345px;
+    height: max-content;
     position: relative;
     background: rgba(46, 47, 64, 0.3);
     backdrop-filter: blur(4px);
@@ -1031,6 +1031,9 @@ input, select, button, textarea {
     .about__content {
         margin-left: 0;
         margin-top: 20px;
+    }
+
+    .content {
         padding: 0 50px;
         display: flex;
         align-items: center;
@@ -1056,6 +1059,24 @@ input, select, button, textarea {
         margin-top: 25px;
     }
     /* about end */
+
+    /* befenits start */
+    .benefits {
+        margin-top: 150px;
+    }
+
+    .container_reverse {
+        flex-direction: column-reverse;
+    }
+
+    .benefits__blocks {
+        margin-left: 0;
+    }
+
+    .benefits__content {
+        margin-top: 20px;
+    }
+    /* befenits end */
 }
 
 @media(max-width: 768px) {
@@ -1263,7 +1284,7 @@ input, select, button, textarea {
     /* line end */
 
     /* about start */
-    .about__content {
+    .content {
         padding: 0;
     }
     /* about end */
@@ -1311,4 +1332,14 @@ input, select, button, textarea {
         height: 140px;
     }
     /* about end */
+
+    /* benefit start */
+    .benefits__blocks {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .block {
+        max-width: 100%;
+    }
+    /* benefit end */
 }
