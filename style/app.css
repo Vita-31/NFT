@@ -1122,6 +1122,29 @@ input, select, button, textarea {
         justify-content: flex-start;
     }
     /* art end */
+
+    /* create start */
+    .create {
+        margin-top: 100px;
+    }
+    /* create end */
+
+    /* partners start */
+    .partners {
+        margin-top: 100px;
+    }
+
+    .partners-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    /* partners end */
+
+    /* footer start */
+    .footer {
+        margin-top: 100px;
+    }
+    /* footer end */
 }
 
 @media(max-width: 768px) {
@@ -1359,6 +1382,25 @@ input, select, button, textarea {
         height: 80px;
     }
     /* artist end */
+
+
+    /* footer start */
+    .nav_footer {
+        opacity: 1;
+        pointer-events: unset;
+        position: unset;
+        transform: translateX(0);
+        flex-direction: unset;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px 40px;
+    }
+
+    .footer__item {
+        margin-left: 0;
+    }
+    /* footer end */
 }
 
 @media(max-width: 568px) {
