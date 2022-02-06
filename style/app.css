@@ -985,8 +985,17 @@ input, select, button, textarea {
     .art__cards {
         justify-content: flex-start;
         overflow-x: auto;
+        width: 100%;
     }
     /* art end */
+
+    /* artist start */
+    .artists__cards {
+        justify-content: flex-start;
+        overflow-x: auto;
+        width: 100%;
+    }
+    /* artist end */
 }
 
 @media(max-width: 992px) {
@@ -1339,6 +1348,17 @@ input, select, button, textarea {
         width: 250px;
     }
     /* art end */
+
+    /* artist start */
+    .card__photo {
+        width: 255px;
+    }
+
+    .card__photo-artist {
+        width: 80px;
+        height: 80px;
+    }
+    /* artist end */
 }
 
 @media(max-width: 568px) {
@@ -1425,4 +1445,21 @@ input, select, button, textarea {
         margin-top: 10px;
     }
     /* art end */
+
+    /* artist start */
+    .card__photo {
+        width: 160px;
+        height: 125px;
+    }
+
+    .card__photo-artist {
+        width: 70px;
+        height: 70px;
+        top: 85px;
+    }
+
+    .card__title {
+        margin-top: 40px;
+    }
+    /* artist end */
 }
