@@ -278,7 +278,6 @@ input, select, button, textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.3s;
 }
 
 .btn_transparent {
@@ -300,9 +299,27 @@ input, select, button, textarea {
     border-radius: 2px;
 }
 
+.btn_transparent:hover {
+    text-shadow:
+    0 0 10px rgba(255,255,255, 1),
+    0 0 50px rgba(255, 255, 255, .8),
+    0 0 75px rgba(255, 255, 255, .6),
+    0 0 76px rgba(255, 255, 255, .4),
+    0 0 77px rgba(255, 255, 255, .5),
+    0 0 78px rgba(255, 255, 255, .4),
+    0 0 79px rgba(255, 255, 255, .3),
+    0 0 80px rgba(255, 255, 255, .2),
+    0 0 80px rgba(255, 255, 255, .1);
+}
+
 .btn_small {
     width: 70px;
     height: 50px;
+}
+
+.btn:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
 }
 
 /* btn end */
