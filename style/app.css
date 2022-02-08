@@ -599,7 +599,7 @@ input, select, button, textarea {
 /* about and */
 
 /* benefits start */
-.befenits {
+.benefits {
     margin-top: 180px;
 }
 
@@ -609,12 +609,16 @@ input, select, button, textarea {
     gap: 75px 25px;
     margin-left: 35px;
 }
+
+.benefits__content {
+    flex: 1;
+}
 /* benefits end */
 
 /* block start */
 .block {
-    width: 345px;
-    height: 225px;
+    max-width: 345px;
+    height: max-content;
     position: relative;
     background: rgba(46, 47, 64, 0.3);
     backdrop-filter: blur(4px);
@@ -696,6 +700,7 @@ input, select, button, textarea {
     display: flex;
     justify-content: space-between;
     transition: .3s;
+    bottom: 0;
 }
 
 .art__cards_visible {
@@ -720,8 +725,8 @@ input, select, button, textarea {
     justify-content: center;
 }
 .tab__item {
-    width: 160px;
     height: 55px;
+    flex: 0 0 160px;
     margin-left: 25px;
     padding: 10px;
     background: rgba(46, 47, 64, 0.3);
@@ -976,6 +981,40 @@ input, select, button, textarea {
     margin-top: 10px;
 }
 
+@media(max-width: 1200px) {
+
+    /* art start */
+
+    .tab__list {
+        width: 100%;
+        overflow-x: auto;
+        gap: 20px;
+    }
+
+    .tab__item {
+        margin-left: 0;
+    }
+
+    .art {
+        margin-top: 100px;
+    }
+
+    .art__cards {
+        justify-content: flex-start;
+        overflow-x: auto;
+        width: 100%;
+    }
+    /* art end */
+
+    /* artist start */
+    .artists__cards {
+        justify-content: flex-start;
+        overflow-x: auto;
+        width: 100%;
+    }
+    /* artist end */
+}
+
 @media(max-width: 992px) {
 
     /* hero start */
@@ -1039,6 +1078,90 @@ input, select, button, textarea {
         padding: 40px 70px;
     }
     /* line end */
+
+    /* about start */
+    .about {
+        margin-top: 100px;
+    }
+
+    .about__content {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .content {
+        padding: 0 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container_center {
+        flex-direction: column;
+    }
+
+    .photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .content__text {
+        margin-top: 20px;
+    }
+
+    .content__btn {
+        margin-top: 25px;
+    }
+    /* about end */
+
+    /* befenits start */
+    .benefits {
+        margin-top: 150px;
+    }
+
+    .container_reverse {
+        flex-direction: column-reverse;
+    }
+
+    .benefits__blocks {
+        margin-left: 0;
+    }
+
+    .benefits__content {
+        margin-top: 20px;
+    }
+    /* befenits end */
+
+    /* art start */
+    .tab__list {
+        justify-content: flex-start;
+    }
+    /* art end */
+
+    /* create start */
+    .create {
+        margin-top: 100px;
+    }
+    /* create end */
+
+    /* partners start */
+    .partners {
+        margin-top: 100px;
+    }
+
+    .partners-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    /* partners end */
+
+    /* footer start */
+    .footer {
+        margin-top: 100px;
+    }
+    /* footer end */
 }
 
 @media(max-width: 768px) {
@@ -1046,11 +1169,19 @@ input, select, button, textarea {
     .title_large {
         font-size: 51px;
     }
+
+    .title_base {
+        font-size: 40px;
+    }
     /* title end */
 
     /* btn start */
     .btn {
         flex: 1 1 auto;
+    }
+
+    .btn_small {
+        flex: inherit;
     }
     /* btn end */
 
@@ -1222,9 +1353,74 @@ input, select, button, textarea {
         font-size: 25px;
     }
     /* hero end */
+
+    /* line start */
+    .line {
+        padding: 40px;
+    }
+
+    .line-container {
+        gap: 20px;
+    }
+
+    .line-number {
+        font-size: 45px;
+    }
+
+    .line-text {
+        font-size: 20px;
+    }
+    /* line end */
+
+    /* about start */
+    .content {
+        padding: 0;
+    }
+    /* about end */
+
+    /* art start */
+    .card {
+        max-width: 285px;
+        padding: 15px;
+    }
+
+    .card__picture {
+        width: 250px;
+    }
+    /* art end */
+
+    /* artist start */
+    .card__photo {
+        width: 255px;
+    }
+
+    .card__photo-artist {
+        width: 80px;
+        height: 80px;
+    }
+    /* artist end */
+
+
+    /* footer start */
+    .nav_footer {
+        opacity: 1;
+        pointer-events: unset;
+        position: unset;
+        transform: translateX(0);
+        flex-direction: unset;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px 40px;
+    }
+
+    .footer__item {
+        margin-left: 0;
+    }
+    /* footer end */
 }
 
-@media(max-width: 480px) {
+@media(max-width: 568px) {
     /* hero start */
     .hero__img {
         width: 300px;
@@ -1244,4 +1440,85 @@ input, select, button, textarea {
         width: 100%;
     }
     /* hero end */
+
+    /* line start */
+    .line {
+        padding: 20px 0;
+    }
+
+    .line-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    /* line end */
+
+    /* about start */
+    .about__photos {
+        gap: 10px;
+    }
+
+    .photo {
+        width: 140px;
+        height: 140px;
+    }
+    /* about end */
+
+    /* benefit start */
+    .benefits__blocks {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .block {
+        max-width: 100%;
+    }
+    /* benefit end */
+
+    /* art start */
+    .tab__item {
+        flex: 0 0 125px;
+    }
+
+    .btn_small {
+        width: 50px;
+        height: 40px;
+    }
+
+    .card {
+        max-width: 185px;
+    }
+
+    .card__picture {
+        width: 150px;
+        height: 125px;
+    }
+
+    .card__description {
+        margin-top: 10px;
+    }
+
+    .title-small  {
+        font-size: 16px;
+    }
+
+    .card__price {
+        margin-top: 10px;
+    }
+    /* art end */
+
+    /* artist start */
+    .card__photo {
+        width: 160px;
+        height: 125px;
+    }
+
+    .card__photo-artist {
+        width: 70px;
+        height: 70px;
+        top: 85px;
+    }
+
+    .card__title {
+        margin-top: 40px;
+    }
+    /* artist end */
 }
